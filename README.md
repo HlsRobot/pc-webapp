@@ -25,6 +25,7 @@ datasource:
   
 - Frontend: Open and change payment.service.ts
 ```ts
-getBackendUrl():``` 
+getBackendUrl():
+``` 
   substitute the <BACKEND_DOMAIN> with the domain the Java service is hosted
   
