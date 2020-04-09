@@ -1,0 +1,84 @@
+<div style="text-align: center;">
+  <h2 style="color: gray;">Wirecard payment system</h2>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput #phone placeholder="Phone Number">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <input matInput #amount placeholder="Amount">
+    </mat-form-field>
+    <br>
+  </form>
+
+  <button mat-stroked-button color="accent" (click)="sendPaymentRequest(phone.value, amount.value)">
+    Request payment
+  </button>
+</div>
+<div><img src="../../assets/images/twilio-seal-default.svg" width="150" style="float: right;"></div>
+
+<br>
+<br>
+<table mat-table [dataSource]="paymentList" matSort class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="callSid">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> CallSid </th>
+    <td mat-cell *matCellDef="let element"> {{element.callSid}} </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header>  Amount </th>
+    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="creditCardNumber">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> CreditCard Number </th>
+    <td mat-cell *matCellDef="let element"> {{element.creditCardNumber}} </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="owner">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Owner </th>
+    <td mat-cell *matCellDef="let element"> {{element.owner}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="expirationDate">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> ExpirationDate </th>
+    <td mat-cell *matCellDef="let element"> {{element.expirationDate}} </td>
+  </ng-container>
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="method">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Method </th>
+    <td mat-cell *matCellDef="let element"> {{element.method}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="securityNumber">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Security Number </th>
+    <td mat-cell *matCellDef="let element"> {{element.securityNumber}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="success">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Success </th>
+    <td mat-cell *matCellDef="let element"> {{element.success}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

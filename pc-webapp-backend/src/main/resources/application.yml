@@ -1,0 +1,26 @@
+twilio:
+  account_sid: <TWILIO ACCOUNT SID>
+  auth_token: <TWILIO AUTH TOKEN>
+  trial_number: <TWILIO PHONE NUMBER>
+  url: <NGROK URL OR YOUR SERVER URL>
+  company: <company_name>
+    alpha: <alpha_sender_id>
+env_variables:
+  BUCKET_NAME: twilio-app
+app:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+spring:
+  datasource:
+    url: "jdbc:mysql://localhost:3306/twilio?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC"
+    username: <SQL USERNAME>
+    password: <SQL USER PASSWORD>
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+server:
+  port: ${PORT:5000}

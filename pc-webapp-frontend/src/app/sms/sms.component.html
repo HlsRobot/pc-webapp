@@ -1,0 +1,18 @@
+
+twilio works!
+<br >
+<br >
+<form class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput #phone placeholder="Phone Number">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput #message placeholder="Message"></textarea>
+  </mat-form-field>
+</form>
+
+<button mat-stroked-button color="accent" (click)="sendMessage(phone.value, message.value)">
+  Submit phone
+</button>
+

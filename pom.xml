@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<artifactId>payment-center</artifactId>
+		<groupId>com.twilio.payment-center</groupId>
+		<version>1.00-SNAPSHOT</version>
+	</parent>
+
+	<groupId>com.twilio.payment-center.webapp</groupId>
+	<artifactId>pc-webapp</artifactId>
+	<packaging>pom</packaging>
+
+	<name>Twilio :: Payment Center Web-App</name>
+
+	<modules>
+		<module>pc-webapp-backend</module>
+		<module>pc-webapp-frontend</module>
+	</modules>
+
+	<properties>
+
+	</properties>
+
+	<profiles></profiles>
+
+	<build>
+		<plugins>
+		</plugins>
+	</build>
+</project>
