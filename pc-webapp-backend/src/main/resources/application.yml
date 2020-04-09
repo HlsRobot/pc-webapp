@@ -4,7 +4,7 @@ twilio:
   trial_number: <TWILIO PHONE NUMBER>
   url: <NGROK URL OR YOUR SERVER URL>
   company: <company_name>
-    alpha: <alpha_sender_id>
+  alpha: <alpha_sender_id>
 env_variables:
   BUCKET_NAME: twilio-app
 app:
