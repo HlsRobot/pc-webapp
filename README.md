@@ -7,7 +7,7 @@
   - mySql connectors
   - Twilio API.
 
-- Open and change application.yml
+- Backend: Open and change application.yml
 ```yml
 twilio:
   account_sid: # your account sid
@@ -21,4 +21,10 @@ datasource:
   url: # your mysql url
   username: # your sql username
   password: # your sql password
+```
+  
+- Frontend: Open and change payment.service.ts
+```ts
+getBackendUrl():``` 
+  substitute the <BACKEND_DOMAIN> with the domain the Java service is hosted
   
